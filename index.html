@@ -111,19 +111,48 @@
         }
 
         .add-agent-btn {
-            background-color: #007bff;
-            padding: 10px;
-            border-radius: 50%;
-            font-size: 18px;
-            line-height: 0;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
         }
 
-        .add-agent-btn:hover {
-            background-color: #0056b3;
-            transform: rotate(90deg);
-        }
+        .add-agent-btn:before {
+    content: '\f234'; /* Icône FontAwesome pour l'ajout */
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: 15px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.add-agent-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.add-agent-btn:active {
+    background-color: #004494;
+    transform: translateY(0px);
+}
+
+.add-agent-btn:before:hover {
+    transform: rotate(360deg);
+}
 
         textarea {
             resize: none;
@@ -188,7 +217,7 @@
 
     <!-- Formulaire -->
     <form id="meetingForm">
-        <h2><i class="fas fa-calendar-alt"></i> FICHE DE RAPPORT ELECTRONIQUE</h2>
+        <h2><i class="fas fa-calendar-alt"></i> Formulaire de réunion</h2>
 
         <label for="date"><i class="fas fa-calendar-day"></i> Date :</label>
         <input type="date" id="date" name="date" required>
@@ -292,7 +321,7 @@
             const details = document.getElementById('details').value;
 
             // Créer le lien mailto
-            const mailtoLink = `mailto:divinitygroup23@gmail.com?subject=Récapitulatif de réunion&body=
+            const mailtoLink = `mailto:juvenapoho@gmail.com?subject=Récapitulatif de réunion&body=
                 Date: ${date}%0A
                 Heure: ${time}%0A
                 Agents: ${agents}%0A
