@@ -6,205 +6,7 @@
     <title>Formulaire de réunion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-             background-color: rgb(247, 247, 247);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Header */
-        header {
-            background-color: #74baff;
-            text-align: center;
-            padding: 20px 0; /* Ajout de padding pour le header */
-        }
-
-        header img {
-            max-width: 120px;
-        }
-
-        /* Form Styling */
-        form {
-             background-color: rgb(241, 241, 241);
-            padding: 30px; /* Augmentation du rembourrage */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px; /* Augmentation de la largeur max */
-            margin: 40px auto; /* Marges pour centrer le formulaire */
-            transition: all 0.3s ease;
-        }
-
-        form:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transform: translateY(-3px);
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        label {
-            display: block;
-             color: #000000;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-
-        input[type="text"], input[type="date"], input[type="time"], input[type="number"], textarea, select {
-            width: 100%;
-            padding: 15px; /* Augmentation du rembourrage */
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
-            border-color: #28a745;
-            outline: none;
-        }
-
-        button, input[type="submit"] {
-            background-color: #28a745;
-            color: white;
-            padding: 12px 20px; /* Augmentation du rembourrage */
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%; /* Pour faire prendre toute la largeur */
-        }
-
-        button:hover, input[type="submit"]:hover {
-            background-color: #218838;
-        }
-
-        .agents-list {
-            margin-bottom: 20px;
-        }
-
-        .agent-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .agent-item select {
-            flex-grow: 1;
-            margin-right: 10px;
-        }
-
-        .agent-item .fa-user {
-            color: #007bff;
-            margin-right: 10px;
-        }
-
-        .add-agent-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #28a745;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 200px;
-            margin: 20px auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .add-agent-btn:before {
-            content: '\f234'; /* Icône FontAwesome pour l'ajout */
-            font-family: 'FontAwesome';
-            position: absolute;
-            left: 15px;
-            font-size: 24px;
-            transition: transform 0.3s ease;
-        }
-
-        .add-agent-btn:hover {
-            background-color: #0056b3;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .add-agent-btn:active {
-            background-color: #004494;
-            transform: translateY(0px);
-        }
-
-        textarea {
-            resize: none;
-            font-family: 'Poppins', sans-serif;
-            height: 100px; /* Hauteur fixe pour le textarea */
-        }
-
-        /* Modal styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .modal-content p {
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
-
-        .modal-buttons {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .modal-buttons button {
-            width: 45%;
-        }
-
-        /* Footer Styling */
-        footer {
-            margin-top: auto;
-             background-color: #000000;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -217,108 +19,99 @@
     <form id="meetingForm">
         <h2><i class="fas fa-calendar-alt"></i> FICHE DE RAPPORT</h2>
 
+        <!-- Nom de l'utilisateur -->
+        <label for="user"><i class="fas fa-user"></i> Nom de l'utilisateur :</label>
+        <select id="user" name="user" required>
+            <option value="">Sélectionnez votre nom</option>
+            <option value="Evan MOUNGINDO">Evan MOUNGINDO</option>
+            <option value="Mercia OUNTELANTALOU">Mercia OUNTELANTALOU</option>
+            <option value="Christians KAYA ETEKA">Christians KAYA ETEKA</option>
+            <option value="Gendel KIBANGOU">Gendel KIBANGOU</option>
+            <option value="Néhémie BIMBENI">Néhémie BIMBENI</option>
+        </select>
+
+        <!-- Mot de passe -->
+        <label for="password"><i class="fas fa-key"></i> Jeton de connexion :</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Email -->
+        <label for="email"><i class="fas fa-envelope"></i> Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Date -->
         <label for="date"><i class="fas fa-calendar-day"></i> Date :</label>
         <input type="date" id="date" name="date" required>
 
+        <!-- Heure -->
         <label for="time"><i class="fas fa-clock"></i> Heure :</label>
         <input type="time" id="time" name="time" required>
 
-        <label><i class="fas fa-users"></i> Nom des agents :</label>
-        <div class="agents-list" id="agentsList">
-            <div class="agent-item">
-                <i class="fas fa-user"></i>
-                <select name="agents[]" required>
-                    <option value="">Sélectionnez un agent</option>
-                    <option value="Evan MOUNGINDO">Evan MOUNGONDO</option>
-                    <option value="Mercia OUNTELANTALOU">Mercia OUNTELANTALOU</option>
-                    <option value="Christians KAYA ETEKA">Christians KAYA ETEKA</option>
-                    <option value="Gendel KIBANGOU">Gendel KIBANGOU</option>
-                    <option value="Néhémie BIMBENI">Néhémie BIMBENI</option>
-                </select>
-            </div>
+        <!-- Prospects prévus -->
+        <label for="prospectsPrevus"><i class="fas fa-users"></i> Nombre de prospects prévus :</label>
+        <input type="number" id="prospectsPrevus" name="prospectsPrevus" required>
+
+        <!-- Prospects rencontrés -->
+        <label for="prospectsRencontres"><i class="fas fa-users"></i> Nombre de prospects rencontrés :</label>
+        <input type="number" id="prospectsRencontres" name="prospectsRencontres" required>
+
+        <!-- Taux de conversion estimé -->
+        <label for="conversion"><i class="fas fa-percentage"></i> Taux de conversion estimé (%):</label>
+        <input type="number" id="conversion" name="conversion" required>
+
+        <!-- Objectif du jour -->
+        <label for="objectif"><i class="fas fa-bullseye"></i> Objectif du jour :</label>
+        <textarea id="objectif" name="objectif" maxlength="200" required></textarea>
+
+        <!-- Suivi nécessaire -->
+        <label for="suiviNecessaire"><i class="fas fa-check-circle"></i> Suivi nécessaire ?</label>
+        <select id="suiviNecessaire" name="suiviNecessaire" onchange="toggleJustification()" required>
+            <option value="NON">NON</option>
+            <option value="OUI">OUI</option>
+        </select>
+
+        <!-- Justification si suivi nécessaire -->
+        <div id="justificationField" style="display: none;">
+            <label for="justification"><i class="fas fa-exclamation-circle"></i> Justification :</label>
+            <textarea id="justification" name="justification" maxlength="200"></textarea>
         </div>
-        <button type="button" class="add-agent-btn" onclick="addAgentField()">ajouter un agent</button>
 
-        <label for="agenda"><i class="fas fa-list"></i> Objectifs du jour :</label>
-        <textarea id="agenda" name="agenda" maxlength="200" placeholder="Max 200 caractères" required></textarea>
+        <!-- Critiques des clients -->
+        <label for="critiques"><i class="fas fa-comments"></i> Critiques clients :</label>
+        <textarea id="critiques" name="critiques" maxlength="200" required></textarea>
 
-        <label for="prospects"><i class="fas fa-users"></i> Nombre de prospects rencontrés :</label>
-        <input type="number" id="prospects" name="prospects" required>
-
-        <label for="details"><i class="fas fa-info-circle"></i> Autres détails :</label>
-        <textarea id="details" name="details" maxlength="500" placeholder="Précisez tout ici" required></textarea>
-
-        <input type="submit" value="Envoyer">
+        <!-- Bouton de soumission -->
+        <input type="submit" value="Soumettre">
     </form>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
+   
+    <div id="summaryModal" class="modal">
         <div class="modal-content">
-            <h2>Récapitulatif des données</h2>
-            <p id="modal-recap"></p>
+            <h2>Récapitulatif</h2>
+            <div id="summaryContent"></div>
             <div class="modal-buttons">
-                <button id="continueBtn">Continuer</button>
-                <button id="cancelBtn">Annuler</button>
+                <button id="emailBtn">Envoyer par Email</button>
+                <button id="smsBtn">Envoyer par SMS</button>
+                <button id="whatsappBtn">Envoyer par WhatsApp</button>
             </div>
+            <button onclick="closeSummaryModal()">Fermer</button>
         </div>
     </div>
 
+   
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <h2>Erreur</h2>
+            <p>Mot de passe incorrect. Veuillez réessayer.</p>
+            <button onclick="closeErrorModal()">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2024 Divinity Innovation. Tous droits réservés.
+        &copy; 2023 - Divinity Group. Tous droits réservés.
     </footer>
 
-    <script>
-        function addAgentField() {
-            const agentItem = document.createElement('div');
-            agentItem.classList.add('agent-item');
-            agentItem.innerHTML = `
-                <i class="fas fa-user"></i>
-                <select name="agents[]" required>
-                    <option value="">Sélectionnez un agent</option>
-                    <option value="Evan MOUNGINDO">Evan MOUNGINDO</option>
-                    <option value="Mercia OUNTELANTALOU">Mercia OUNTELANTALOU</option>
-                    <option value="Christians KAYA ETEKA">Christians KAYA ETEKA</option>
-                    <option value="Gendel KIBANGOU">Gendel KIBANGOU</option>
-                    <option value="Néhémie BIMBENI">Néhémie BIMBENI</option>
-                </select>
-            `;
-            document.getElementById('agentsList').appendChild(agentItem);
-        }
+    <script src="script.js"></script>
 
-        document.getElementById('meetingForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            const agents = Array.from(document.querySelectorAll('select[name="agents[]"]')).map(select => select.value).filter(value => value);
-            const agenda = document.getElementById('agenda').value;
-            const prospects = document.getElementById('prospects').value;
-            const details = document.getElementById('details').value;
-
-            let recap = `Date: ${date}\nHeure: ${time}\nAgents: ${agents.join(', ')}\nOrdre du jour: ${agenda}\nNombre de prospects: ${prospects}\nAutres détails: ${details}`;
-
-            document.getElementById('modal-recap').innerText = recap;
-            document.getElementById('myModal').style.display = "block";
-        });
-
-        document.getElementById('continueBtn').addEventListener('click', function () {
-            const subject = 'Nouvelle réunion planifiée';
-            const body = document.getElementById('modal-recap').innerText;
-            const mailtoLink = `mailto:divinitygroup23@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-        });
-
-        document.getElementById('cancelBtn').addEventListener('click', function () {
-            document.getElementById('myModal').style.display = "none";
-        });
-
-        // Fermer le modal quand on clique en dehors
-        window.onclick = function(event) {
-            const modal = document.getElementById('myModal');
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        };
-    </script>
 </body>
 </html>
